@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pendataanwarga/views/dashborad_view.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({Key? key}) : super(key: key);
@@ -47,7 +48,12 @@ class LoginView extends StatelessWidget {
                         ),
                       ),
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushReplacement(context,
+                              MaterialPageRoute(builder: (bc) {
+                            return DashboardView();
+                          }));
+                        },
                         child: Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 40),
                           child: Text('Login'),
